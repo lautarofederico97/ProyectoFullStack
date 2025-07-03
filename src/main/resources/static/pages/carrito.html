@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/styles.css"> 
+    <link rel="stylesheet" href="/css/bootstrap.css">
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <title>WINE-NOT</title>
+
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col text-center">
+                    <h1 class="display-4">WINE NOT</h1>
+                </div>
+            </div>
+        </div>
+    
+        <!-- Navbar -->
+        <nav class="navbar navbar-expand-lg navbar-light">
+            <a class="navbar-brand" href="./carrito.html">CARRITO</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="/index.html">Inicio</a>
+                    </li>
+                    
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <h2>Productos en tu Carrito</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Producto</th>
+                    <th>Precio</th>
+                    <th>Cantidad</th>
+                    <th>Total</th>
+                    
+                </tr>
+            </thead>
+            <tbody id="carrito-items">
+                <!-- Aquí se agregarán los productos del carrito -->
+                
+            </tbody>
+        </table>
+        <div id="total-container">
+            <strong>Total: </strong><span id="total">0</span>$
+        </div>
+        <div class="button-container">
+            <button id="limpiar-carrito" onclick="limpiarCarrito()">Limpiar Carrito</button>
+            <button id="finalizar-compra" class="btn btn-success">Finalizar Compra</button>
+        </div>
+    </main>
+    
+
+    <footer>
+        <p>&copy; 2024 Tu Tienda de Vinos</p>
+    </footer>
+
+    <script src="/js/carrito.js"></script> <!-- Enlaza tu archivo JavaScript -->
+</body>
+</html>

@@ -1,0 +1,144 @@
+<section id="productos" class="container my-5">
+    <div class="row">
+        <!-- Producto 1 -->
+        <div class="col-12 col-sm-6 col-md-3 mb-4">
+            <div class="producto" data-id="1" data-nombre="Vino Tinto" data-precio="7500" onclick="expandirTarjeta(this)">
+                <img src="./Image/los intocables.jpeg" alt="Vino Tinto" class="img-fluid">
+                <h3>Los Intocables</h3>
+                <p>Bourbon Barrel Malbec</p>
+                <p>Precio: $7500</p>
+                <p class="stock-text">Stock: <span class="stock-cantidad">?</span></p>
+                <button class="btn btn-primary" onclick="agregarAlCarrito('Los Intocables', 10000)">Agregar al Carrito</button>
+                <div class="descripcion">
+                    <p>Las uvas Malbec provenientes de una cuidadosa selección de parcelas, 
+                        con muy bajo rendimiento de racimos por planta, 
+                        logran un vino de color violáceo profundo con matices negros. 
+                        Su innovador proceso de elaboración, que contempla una maduración del vino en barricas de roble Bourbon,
+                        desprende aromas a humo, caramelo y miel. En boca, el tostado medio, 
+                        aporta sabores a vainilla y a mermeladas de frutos rojos cocidos como las moras y las ciruelas.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Producto 2 -->
+        <div class="col-12 col-sm-6 col-md-3 mb-4">
+            <div class="producto" data-id="2" data-nombre="Vino Blanco" data-precio="9000" onclick="expandirTarjeta(this)">
+                <img src="./Image/Dulce dilema.jpeg" alt="Vino Blanco" class="img-fluid">
+                <h3>Dulce Dilema</h3>
+                <p>Blanco Dulce</p>
+                <p>Precio: $9000</p>
+                <p class="stock-text">Stock: <span class="stock-cantidad">?</span></p>
+                <button class="btn btn-primary" onclick="agregarAlCarrito('Dulce Dilema', 9000)">Agregar al Carrito</button>
+                <div class="descripcion">
+                    <p>Dilema Blanco Dulce es un vino fresco y delicado, de color amarillo pálido con destellos verdosos.
+                     Sus expresivas notas de frutas tropicales,
+                      cítricas y flores blancas lo convierten en un vino untuoso y de acidez equilibrada,
+                      perfecto para acompañar frutos secos y quesos, mariscos y postres.
+                       Aperitivo ideal para disfrutar las tardes de sol .</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Producto 3 -->
+        <div class="col-12 col-sm-6 col-md-3 mb-4">
+            <div class="producto" data-id="3" data-nombre="Vino Rose" data-precio="8000" onclick="expandirTarjeta(this)">
+                <img src="./Image/callia.jpeg" alt="Vino Rose" class="img-fluid">
+                <h3>Callia</h3>
+                <p>Rose</p>
+                <p>Precio: 8000$</p>
+                <p class="stock-text">Stock: <span class="stock-cantidad">?</span></p>
+                <button class="btn btn-primary" onclick="agregarAlCarrito('Callia Rose', 8000)">Agregar al Carrito</button>
+                <div class="descripcion">
+                    <p>Callia Rosé presenta un tono rosa suave con destellos naranjas a la vista mientras que en nariz se percibe un perfil floral con notas de rosas y jazmines.
+                         En boca, tiene entrada suave y de sensación fresca, con paladar muy frutado y acidez bien equilibrada.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Producto 4 -->
+        <div class="col-12 col-sm-6 col-md-3 mb-4">
+            <div class="producto" data-id="4" data-nombre="Vino Rose" data-precio="12000" onclick="expandirTarjeta(this)">
+                <img src="./Image/Latitud33.jpeg" alt="Vino Rose" class="img-fluid">
+                <h3>Latitud 33</h3>
+                <p>Malbec Rose</p>
+                <p>Precio: 12000$</p>
+                <p class="stock-text">Stock: <span class="stock-cantidad">?</span></p>
+                <button class="btn btn-primary" onclick="agregarAlCarrito('Latitud 33', 12000)">Agregar al Carrito</button>
+                <div class="descripcion">
+                    <p>Color: Rojo rubí con reflejos azulados.
+                    Aroma: Intenso y fresco. Se destacan aromas a frutos rojos como cerezas y ciruelas, acompañadas de suaves notas a especias, vainilla y caramelo.   
+                    Sabor: Redondo, vivo, frutado e intenso. De cuerpo medio, suave y cremoso, con buena presencia aromática.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Producto 5 -->
+        <div class="col-12 col-sm-6 col-md-3 mb-4">
+            <div class="producto" data-id="5" data-nombre="Vino Blend" data-precio="25000" onclick="expandirTarjeta(this)">
+                <img src="./Image/rutini.jpeg" alt="Vino blend" class="img-fluid">
+                <h3>Rutini</h3>
+                <p>Cabernet - Malbec 2012</p>
+                <p>Precio: $25000</p>
+                <p class="stock-text">Stock: <span class="stock-cantidad">?</span></p>
+                <button class="btn btn-primary" onclick="agregarAlCarrito('Rutini', 25000)">Agregar al Carrito</button>
+                <div class="descripcion">
+                    <p>Es un blend de corte, 50% Cabernet Sauvignon y 50% Malbec. Rojo rubí profundo. 
+                        El dúo de cepas de origen bordelés da como resultado un tinto armonioso y equilibrado: 
+                        la Cabernet Sauvignon entrega su carácter corpóreo y pleno y la Malbec matiza de suaves y dulces taninos el assemblage, 
+                        realzando una  combinación única de aromas y sabor frutados.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Producto 6 -->
+        <div class="col-12 col-sm-6 col-md-3 mb-4">
+            <div class="producto" data-id="6" data-nombre="Vino Malbec" data-precio="12500" onclick="expandirTarjeta(this)">
+                <img src="./Image/andillan.jpeg" alt="Vino malbec" class="img-fluid">
+                <h3>Andillian</h3>
+                <p>malbec 2018</p>
+                <p>Precio: $12500</p>
+                <p class="stock-text">Stock: <span class="stock-cantidad">?</span></p>
+                <button class="btn btn-primary" onclick="agregarAlCarrito('Andillian', 12500)">Agregar al Carrito</button>
+                <div class="descripcion">
+                    <p>De color rojo rubí profundo. Aromas florales, minerales y herbáceos, 
+                    propios de las variedades que lo componen. En boca es de entrada amable y paso ligero, 
+                    de elegante final y gran persistencia.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Producto 7 -->
+        <div class="col-12 col-sm-6 col-md-3 mb-4">
+            <div class="producto" data-id="7" data-nombre="Vino Malbec" data-precio="10000" onclick="expandirTarjeta(this)">
+                <img src="./Image/trumpeter.jpeg" alt="Vino malbec" class="img-fluid">
+                <h3>Trumpeter</h3>
+                <p>Malbec 2017</p>
+                <p>Precio: 10000$</p>
+                <p class="stock-text">Stock: <span class="stock-cantidad">?</span></p>
+                <button class="btn btn-primary" onclick="agregarAlCarrito('Trumpeter Malbec', 10000)">Agregar al Carrito</button>
+                <div class="descripcion">
+                    <p>Rojo violáceo brillante, seduce con sus aromas frutales (cerezas) y especiados (canela, cardamomo, pimienta negra).
+                     Posee gran cuerpo y su vivaz estructura acentúa los taninos intensos que se vuelven aterciopelados en el retrogusto.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Producto 8 -->
+        <div class="col-12 col-sm-6 col-md-3 mb-4">
+            <div class="producto" data-id="8" data-nombre="Vino Cabernet" data-precio="20000" onclick="expandirTarjeta(this)">
+                <img src="./Image/penedo borges.jpeg" alt="Vino Cabernet" class="img-fluid">
+                <h3>Penedo Borges</h3>
+                <p>Gran Cabernet Sauvignon</p>
+                <p>Precio: 20000$</p>
+                <p class="stock-text">Stock: <span class="stock-cantidad">?</span></p>
+                <button class="btn btn-primary" onclick="agregarAlCarrito('Penedo Borges', 20000)">Agregar al Carrito</button>
+                <div class="descripcion">
+                    <p>De color rojo rubí intenso. 
+                    En nariz, presenta notas de frutos negros, pimiento rojo asado, pimienta blanca, vainilla y moca. 
+                    Taninos bien presentes y maduros, redondo en boca y de final amable y sedoso.</p>
+                </div>
+            </div>
+       </div>
+       <!-- Más productos (puedes agregar más bloques según sea necesario) -->
+    </div>    
+</section>

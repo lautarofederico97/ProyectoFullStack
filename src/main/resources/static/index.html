@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      
+        <!-- Fuentes -->
+        <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Roboto:wght@400&display=swap" rel="stylesheet" />
+      
+        <!-- Estilos -->
+        <link rel="stylesheet" href="/css/styles.css">
+        <link rel="stylesheet" href="/css/bootstrap.css">
+        <link rel="stylesheet" href="/js/bootstrap.bundle.min.js">
+      
+        <title>WINE-NOT</title>
+      </head>
+<body>
+    <header>
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col text-center">
+                    <h1 class="display-4">WINE NOT</h1>
+                </div>
+            </div>
+        </div>
+    
+        <!-- Navbar -->
+        <nav class="navbar navbar-expand-lg navbar-light">
+            <a class="navbar-brand" href="./index.html">WINE-NOT</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="./index.html">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/pages/carrito.html">Carrito(<span id="cart-count">0</span>)</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#reseñas">Reseñas</a> <!-- Enlace a la sección de reseñas -->
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contacto">Contacto</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+        <!-- Carrusel de imágenes -->
+        <div id="carouselExampleIndicators" class="carousel slide carousel-fade" data-ride="carousel">
+            <ol class="carousel-indicators">
+                <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+            </ol>
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="./Imagenes Vinos/imagenes carrousel/pexels-jill-wellington-1638660-39351.jpg" class="d-block w-100" alt="#">
+                </div>
+                <div class="carousel-item">
+                    <img src="./Imagenes Vinos/imagenes carrousel/pexels-elletakesphotos-2954929.jpg" class="d-block w-100" alt="#">
+                </div>
+                <div class="carousel-item">
+                    <img src="./Imagenes Vinos/imagenes carrousel/pexels-mali-110822.jpg" class="d-block w-100" alt="#">
+                </div>
+            </div>
+            <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+            </a>
+        </div>  
+    
+    </header>
+    
+
+    <main>
+        <h2 class="text-center mb-4">Nuestros Vinos</h2>
+        <!-- Notificación de producto agregado en un popup lateral -->
+        <div id="popup-notification" class="popup-notification">
+            <div class="popup-content">
+                <p>¡Producto agregado al carrito!</p>
+            </div>
+        </div>
+                            <!-- seccion Productos -->
+        <!-- Aquí cargamos los productos -->
+        <section id="productos">
+            <div id="productos-container"></div>
+        </section>
+                            <!-- seccion contacto -->
+        <section id="contacto">
+            <div class="form-container">
+                <h2>Contacto</h2>
+                <form action="https://formspree.io/f/xbljypqb" method="POST">
+                    <div class="form-group">
+                        <label for="nombre-contacto">Nombre:</label>
+                        <input type="text" class="form-control" id="nombre-contacto" name="nombre" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email:</label>
+                        <input type="email" class="form-control" id="email" name="email" required placeholder="ejemplo@dominio.com">
+                    </div>
+                    <div class="form-group">
+                        <label for="mensaje">Mensaje:</label>
+                        <textarea class="form-control" id="mensaje" name="mensaje" required maxlength="1000"></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-block">Enviar</button>
+                </form>
+            </div>
+        </section>
+    </main>
+    
+
+    <!-- Sección de Reseñas al final de la página -->
+<section id="reseñas" class="reseñas-section">
+    <div class="container">
+        <h2 class="text-center mb-4">Lo que dicen nuestros clientes</h2>
+        <div class="row">
+            <!-- Reseña 1 -->
+            <div class="col-12 col-md-4 mb-4">
+                <div class="reseña">  
+                    <h3>Juan Pérez</h3>
+                    <p>"Excelente vino, realmente me sorprendió el sabor. Lo recomiendo a todos los amantes del vino."</p>
+                    <p><strong>Calificación:</strong> ★★★★☆</p>
+                </div>
+            </div>
+
+            <!-- Reseña 2 -->
+            <div class="col-12 col-md-4 mb-4">
+                <div class="reseña">
+                    <h3>Ana Rodríguez</h3>
+                    <p>"Gran calidad y un precio justo. Me encantó el toque de sabor que tiene este vino. ¡Lo compraré de nuevo!"</p>
+                    <p><strong>Calificación:</strong> ★★★★★</p>
+                </div>
+            </div>
+
+            <!-- Reseña 3 -->
+            <div class="col-12 col-md-4 mb-4">
+                <div class="reseña">
+                    <h3>Carlos Gómez</h3>
+                    <p>"Un vino con carácter y excelente para acompañar una buena comida. Muy satisfecho con la compra."</p>
+                    <p><strong>Calificación:</strong> ★★★☆☆</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+    <footer class="bg-dark text-white text-center py-3">
+        <p>&copy; 2024 Tienda de Vinos. Todos los derechos reservados.</p>
+        <p><a href="README.md" target="_blank" class="text-white">Readme</a></p>
+    </footer>
+
+        <!-- jQuery, Popper.js, y Bootstrap JS -->
+
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+        <script src="/js/carrito.js"></script>
+        <script src="/js/productos.js"></script>
+</body>
+
+
+
+
+</html>

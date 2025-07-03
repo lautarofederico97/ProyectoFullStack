@@ -1,0 +1,469 @@
+body {
+    font-family: 'Roboto', sans-serif;  /* Fuente principal para el cuerpo */
+    margin: 0;
+    padding: 0;
+    background-color: #f8f8f8; /* Color de fondo suave */
+}
+
+/*seccion Header*/
+
+header {
+    background: #4d204e;
+    background: linear-gradient(112deg,#4d204e 25%, #d28dd2 80%);
+    background: -webkit-linear-gradient(112deg,#4d204e 25%, #d28dd2 80%);
+    background: -moz-linear-gradient(112deg,#4d204e 25%, #d28dd2 80%);
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    font-family: 'Playfair Display', serif; /* Fuente para el header */
+    
+}
+/* Estilo para centrar el título en el header */
+header h1 {
+    font-family: 'Playfair Display', serif;
+    font-weight: bold;
+    font-size: 4rem; /* Ajusta el tamaño a tu gusto */
+    color: #333;
+    text-transform: uppercase;
+    letter-spacing: 2px; /* Espaciado entre letras */
+}
+
+
+
+/* Estilo del navbar */
+.navbar {
+    margin-top: 20px;
+    justify-content: center; /* Centramos el navbar */
+    border: none; /* Eliminar bordes por defecto */
+    display: flex; /* Usamos flexbox para centrar el contenido */
+    padding: 0; /* Eliminamos el padding extra */
+}
+.navbar .navbar-nav {
+    display: flex; /* Usamos flexbox para alinear los elementos del menú */
+    justify-content: center; /* Centramos los elementos dentro de la barra de navegación */
+    list-style-type: none;
+    margin-left: 0;
+    margin-right: 0;
+}
+
+
+.navbar-light .navbar-nav .nav-link {
+    color: #333; /* Color de texto de los enlaces */
+}
+
+.navbar-light .navbar-nav .nav-link:hover {
+    color: #007bff; /* Color cuando el enlace es hover */
+}
+
+/* Asegurarnos de que los enlaces del navbar sean legibles en pantallas pequeñas */
+@media (max-width: 767px) {
+    .navbar .navbar-nav .nav-link {
+        font-size: 1rem; /* Ajustar el tamaño de los enlaces para pantallas más pequeñas */
+    }
+}
+/*fin seccion header*/
+
+
+/*seccion carrousel*/
+
+/* Asegura que las imágenes del carrusel no se deformen */
+.carousel-inner {
+    height: 300px; /* Define una altura fija para el carrusel */
+    overflow: hidden; /* Oculta cualquier contenido que sobresalga */
+}
+
+.carousel-inner img {
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+}
+
+/* Aseguramos que cada slide tenga una altura adecuada */
+.carousel-item {
+    display: flex;
+    justify-content: center; /* Centra horizontalmente */
+    align-items: center;     /* Centra verticalmente */
+    height: 300px;           /* Puedes ajustar la altura como lo desees */
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    transition: transform 1s ease, opacity 1s ease; /* Transición suave para las imágenes */
+}
+
+/* Aplica una transición suave en el deslizamiento */
+.carousel-item-next, .carousel-item-prev, .carousel-item.active {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+/* Cuando la imagen no es activa, la movemos fuera de la vista */
+.carousel-item-next, .carousel-item-prev {
+    opacity: 0;
+    transform: translateX(100%); /* Mueve la imagen hacia la derecha */
+}
+
+.carousel-item.active {
+    opacity: 1;
+    transform: translateX(0); /* Devuelve la imagen activa a su posición */
+}
+
+/* Animación de zoom en las imágenes */
+.carousel-item img {
+    transition: transform 1s ease, opacity 1s ease;
+}
+
+.carousel-item.active img {
+    transform: scale(1.05); /* Un pequeño zoom al hacer active la imagen */
+}
+
+.carousel-item-next img, .carousel-item-prev img {
+    transform: scale(1); /* Sin zoom cuando no es la imagen activa */
+}
+
+/* Ajusta la altura del carrusel para pantallas más pequeñas */
+@media (max-width: 768px) {
+    .carousel-inner {
+        height: 300px; /* Menor altura en pantallas pequeñas */
+    }
+}
+
+/* Ocultar los indicadores del carrusel */
+.carousel-indicators {
+    display: none !important;
+}
+
+
+/*fin seccion carrousel*/
+
+
+
+/*seccion carrito*/
+
+/* Agregar popup carrito*/
+/* Estilos para el popup debajo del carousel */
+.popup-notification {
+    position: fixed;
+    left: 20px; /* Alineado a la izquierda */
+    top: calc(100vh - 500px); /* Posición inicial debajo del carousel (ajustar si es necesario) */
+    background-color: #28a745; /* Color verde (puedes cambiarlo) */
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    display: none;
+    z-index: 9999;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    opacity: 0;
+    transition: opacity 0.5s ease, transform 0.5s ease;
+    transform: translateY(20px); /* Inicialmente hacia abajo */
+  }
+  
+  /* Cuando el popup se muestra */
+  .popup-notification.show {
+    display: block;
+    opacity: 1;
+    transform: translateY(0); /* Se mueve hacia su posición final */
+  }
+  
+  /* Responsividad para pantallas más pequeñas */
+  @media (max-width: 768px) {
+    .popup-notification {
+      left: 10px; /* Menor margen para móviles */
+      right: 10px; /* Para que ocupe más espacio en pantallas pequeñas */
+      top: calc(100vh - 120px); /* Ajustamos la posición vertical */
+      padding: 12px 15px; /* Ajuste en el padding */
+      font-size: 14px; /* Fuente más pequeña para móviles */
+    }
+  }
+  
+  .popup-content {
+    font-size: 16px;
+  }
+  
+
+nav ul {
+    list-style: none; /* Sin viñetas */
+    padding: 0;
+}
+
+nav ul li {
+    display: inline; /* Elementos en línea */
+    margin-right: 15px; /* Espacio entre enlaces */
+}
+
+nav ul li a {
+    color: white; /* Color de los enlaces */
+    text-decoration: none; /* Sin subrayado */
+    font-family: 'Arial', sans-serif; /* Asegúrate de que esta fuente se aplique a los enlaces */
+}
+
+h1, h2 {
+    font-family: 'Playfair Display', serif; /* Fuente para subtítulos */
+    text-align: center;
+    margin-top: 20px;
+    color: #6c4f4f; /* Color del texto del subtítulo */
+}
+
+main {
+    padding: 20px; /* Espaciado interno del contenido principal */
+}
+
+th, td {
+    padding: 10px; /* Espaciado interno de celdas */
+    border: 1px solid #ddd;
+    text-align: left; /* Alineación de texto a la izquierda */
+}
+
+th {
+    background-color: #f2f2f2; /* Fondo para el encabezado de la tabla */
+}
+td {
+    text-align: center; /* Centrado de contenido en celdas */
+}
+
+table {
+    width: 100%; /* Tabla ocupa todo el ancho */
+    border-collapse: collapse; /* Colapsar bordes */
+}
+
+#total-container {
+    text-align: right; /* Alinear total a la derecha */
+    margin-top: 20px; /* Espacio superior */
+}
+
+button {
+    background-color: #6c4f4f; /* Color del botón */
+    color: white; /* Color del texto del botón */
+    border: none; /* Sin borde */
+    padding: 10px 15px; /* Espaciado interno */
+    border-radius: 4px; /* Bordes redondeados */
+    cursor: pointer; /* Cambiar cursor al pasar por encima */
+    width: 100%; /* Botón ocupa todo el ancho */
+    margin-top: 10px; /* Espacio superior */
+}
+
+.button-container {
+    display: flex;
+    justify-content: space-between; /* Espacio entre los botones */
+    align-items: center; /* Centrar verticalmente los botones */
+    margin-top: 20px; /* Margen superior para separar de la tabla */
+}
+
+.button-container button {
+    padding: 5px 10px; /* Espaciado interno más pequeño para los botones */
+    font-size: 14px; /* Tamaño de fuente más pequeño */
+    cursor: pointer; /* Cambiar el cursor al pasar por encima */
+    margin-right: 20px; /* Margen a la derecha para separar los botones */
+}
+/* Asegurarse de que el último botón no tenga margen adicional */
+.button-container button:last-child {
+    margin-right: 0; /* Elimina el margen del último botón */
+}
+
+button:hover {
+    background-color: #5a3e3e; /* Color al pasar el mouse */
+}
+/*fin seccion carrito*/
+
+/*Productos*/
+
+/* Asegurarse de que los productos se vean correctamente */
+.producto {
+    text-align: center; /* Centra el texto dentro de cada producto */
+    padding: 15px;
+    border: 1px solid #ddd; /* Agregar un borde gris a las tarjetas */
+    border-radius: 5px; /* Bordes redondeados */
+    background-color: #f9f9f9; /* Fondo blanco para cada tarjeta */
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1); /* Sombra suave */
+    transition: transform 0.3s ease; /* Efecto de transición al pasar el ratón */
+    cursor: pointer; /* Hacer que se vea clickeable */
+    position: relative;
+}
+
+
+/* Añadir efecto de hover */
+.producto:hover {
+    transform: scale(1.05); /* Aumenta ligeramente el tamaño al pasar el ratón */
+}
+
+.producto img {
+    width: 100%; /* Ocupa el ancho completo del contenedor */
+    height: 200px; /* Define una altura consistente para todas las imágenes */
+    object-fit: contain; /* Hace que las imágenes se recorten para llenar el espacio sin distorsión */
+}
+
+.producto h3 {
+    font-family: 'Playfair Display', serif; /* Fuente para el nombre del producto */
+    color: #6c4f4f; /* Color para el nombre del vino */
+}
+
+/* Espaciado en los párrafos de descripción */
+.producto p {
+    font-size: 1rem;
+    margin: 5px 0;
+}
+
+/* Estilo del botón */
+.producto button {
+    margin-top: 10px;
+}
+/* Descripción extra oculta por defecto */
+.descripcion {
+    display: none;
+    margin-top: 15px;
+    background-color: #f1f1f1;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilo cuando la tarjeta está expandida */
+.producto.expandida {
+    transform: scale(1.1); /* Agranda la tarjeta */
+    z-index: 1; /* Asegura que la tarjeta expandida esté encima de otras */
+}
+
+/* Mostrar la descripción cuando la tarjeta esté expandida */
+.producto.expandida .descripcion {
+    display: block;
+}
+/*Fin seccion productos*/
+
+
+/*Seccion de contacto*/
+
+label {
+    display: block; /* Hacer que las etiquetas ocupen toda la línea */
+    margin: 10px 20px 5px; /* Margen superior de 10px, márgenes laterales de 20px, margen inferior de 5px */
+    color: #333; /* Color del texto del label */
+}
+
+input, textarea {
+    width: calc(100% - 40px); /* Ajustar el ancho para tener en cuenta los márgenes laterales */
+    padding: 10px; /* Espaciado interno */
+    margin: 0 20px 15px; /* Espacio entre campos con márgenes laterales de 20px */
+    border: 1px solid #ccc; /* Borde suave */
+    border-radius: 4px; /* Bordes redondeados */
+}
+.form-container {
+    background-color: #ffffff; /* Fondo blanco para los formularios */
+    border: 1px solid #ddd; /* Borde suave */
+    border-radius: 8px; /* Bordes redondeados */
+    padding: 20px; /* Espaciado interno */
+    margin: 20px 0; /* Margen vertical */
+    margin-right: 10px; /* Margen derecho ajustado */
+    width: 400px; /* Ancho fijo para el contenedor */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    float: left; /* Alinear a la izquierda */
+}
+
+#contacto {
+    overflow: hidden; /* Asegura que los elementos flotantes se comporten correctamente */
+    padding-right: 20px; /* Espacio adicional a la derecha del contenedor principal */
+}
+
+h2 {
+    color: #6c4f4f; /* Color para los títulos de los formularios */
+    text-align: center; /* Centrar texto */
+}
+
+button {
+    background-color: #6c4f4f; /* Color de fondo del botón */
+    color: white; /* Color del texto del botón */
+    border: none; /* Sin borde */
+    padding: 10px 15px; /* Espaciado interno */
+    border-radius: 4px; /* Bordes redondeados */
+    cursor: pointer; /* Cambiar cursor al pasar por encima */
+    width: 100%; /* Botón ocupa todo el ancho */
+}
+
+button:hover {
+    background-color: #5a3e3e; /* Color al pasar el mouse */
+}
+
+input::placeholder {
+    color: #aaa; /* Color del texto del placeholder */
+    font-style: italic; /* Estilo del texto del placeholder */
+}
+/*Fin seccion contacto*/
+
+/* Seccion Reseñas*/
+/* Estilos generales para la sección de reseñas */
+.reseñas-section {
+    background-color: #f9f9f9;
+    padding: 50px 0;
+}
+
+.reseñas-section h2 {
+    font-family: 'Playfair Display', serif;
+    color: #6c4f4f;
+    font-size: 2rem;
+    margin-bottom: 30px;
+}
+
+.reseña {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.reseña:hover {
+    transform: scale(1.05); /* Efecto al pasar el mouse */
+}
+
+.reseña-img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 15px;
+}
+
+.reseña h3 {
+    font-family: 'Playfair Display', serif;
+    color: #6c4f4f;
+    margin-bottom: 10px;
+}
+
+.reseña p {
+    font-size: 1rem;
+    color: #555;
+}
+
+.reseña strong {
+    font-weight: bold;
+    color: #333;
+}
+
+.reseña .calificacion {
+    font-size: 1.2rem;
+    color: #ffcc00; /* Color de las estrellas */
+}
+
+/* Fin seccion reseñas*/
+footer {
+    text-align: center;
+    padding: 10px 0;
+    background: #4d204e;
+    background: linear-gradient(112deg,#4d204e 25%, #d28dd2 80%);
+    background: -webkit-linear-gradient(112deg,#4d204e 25%, #d28dd2 80%);
+    background: -moz-linear-gradient(112deg,#4d204e 25%, #d28dd2 80%);
+    color: white;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+.link-readme {
+    margin-top: 10px;  /* Espacio superior para separar del texto anterior */
+    font-size: 0.8em;   /* Tamaño de fuente más pequeño */
+}
+
+.link-readme a {
+    text-align: initial;
+    color: rgb(22, 10, 24);          /* Color gris para el enlace */
+}
